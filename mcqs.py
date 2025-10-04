@@ -1,7 +1,7 @@
 import json
 
 score=0
-wrong=dict()
+wrong=[]
 subject="subjects/test_sub"
 
 with open(f"{subject}/mcqs.json", "r") as file:
@@ -16,11 +16,10 @@ with open(f"{subject}/mcqs.json", "r") as file:
         if user_answer==question["answer"]:
             score+=1
         else:
-            wrong.update({"#":i,"":question,"":option,"your answer":user_answer,"answer":question["answer"]})
+            wrong.append([i,question,option,user_answer,question["answer"]])
 
 
 print(f"Score: {score}/{total}")
 
 if wrong:
-    for i in wrong:
-        print("\n",i,wrong[i])
+    print(wrong)

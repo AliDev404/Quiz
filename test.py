@@ -7,3 +7,13 @@ y=[]
 y.append([1,"asf","opt","means","correct"])
 a=0
 print(*y[a])
+
+
+q=  {
+    "q": "What is the capital of France?",
+    "options": ["A) Berlin", "B) Paris", "C) Madrid"],
+    "answer": "B"
+  }
+
+for i in y[0]:
+  print(i)
