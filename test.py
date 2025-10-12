@@ -16,4 +16,6 @@ q=  {
   }
 
 for i in y[0]:
-  print(i)
+  "\033[91mRed Text\033[0m"
+  print(f"\033[91m{i}\033[0m")
+

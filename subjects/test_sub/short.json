@@ -1,0 +1,29 @@
+{
+  "c1": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "answer": "Paris"
+    },
+    {
+      "id": 2,
+      "question": "Who developed Python programming language?",
+      "answer": "Guido van Rossum"
+    },
+    {
+      "id": 3,
+      "question": "What does CPU stand for?",
+      "answer": "Central Processing Unit"
+    },
+    {
+      "id": 4,
+      "question": "What year was Python first released?",
+      "answer": "1991"
+    },
+    {
+      "id": 5,
+      "question": "Which planet is known as the Red Planet?",
+      "answer": "Mars"
+    }
+  ]
+}

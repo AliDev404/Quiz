@@ -1,25 +1,20 @@
 import json
+from settings import settings
 
-score=0
-wrong=[]
+
 subject="subjects/test_sub"
 
 with open(f"{subject}/mcqs.json", "r") as file:
     questions = json.load(file)
     total=0
-    for i,question in enumerate(questions):
+    for question_i in questions:
         total+=1
-        print(f"{question["q"]}\n")
-        for option in question["options"]:
-            print(option)
-        user_answer=input("Choose (A/B/C):\n").strip().upper()
-        if user_answer==question["answer"]:
-            score+=1
-        else:
-            wrong.append([i,question,option,user_answer,question["answer"]])
-
+        question=question_i["q"]
+        options=question_i["options"]
+        user_answer=settings.mcq_input(question,options)
+        score, wrong=settings.mcq_check(question,options,user_answer,question_i["answer"])
+        
 
 print(f"Score: {score}/{total}")
-
 if wrong:
     print(wrong)
